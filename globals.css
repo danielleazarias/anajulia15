@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Jost", sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: #fbfcfe;
+  color: #0d1533;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #0abab5;
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #eef0fa;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1b2a6b, #0abab5);
+  border-radius: 999px;
+}
+
+/* Cursor personalizado inspirado em borboletas (desktop apenas) */
+@media (hover: hover) and (pointer: fine) {
+  .butterfly-cursor {
+    cursor: none;
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+/* Elegant heading utility */
+.text-shadow-soft {
+  text-shadow: 0 4px 24px rgba(13, 21, 51, 0.35);
+}
+
+.divider-ornate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.divider-ornate::before,
+.divider-ornate::after {
+  content: "";
+  height: 1px;
+  width: 3.5rem;
+  background: linear-gradient(90deg, transparent, currentColor);
+}
+.divider-ornate::after {
+  background: linear-gradient(90deg, currentColor, transparent);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0a0f24;
+    color: #eef0fa;
+  }
+  .glass-panel {
+    background: rgba(13, 21, 51, 0.55);
+    border: 1px solid rgba(199, 205, 219, 0.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #0abab5;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
