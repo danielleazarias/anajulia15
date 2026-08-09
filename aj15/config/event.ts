@@ -58,7 +58,7 @@ export const eventConfig = {
     ctaPrimary: "Confirmar Presença",
     ctaSecondary: "Ver Local",
     backgroundImage:
-      "https://images.unsplash.com/photo-1509319117193-57bab727e09d?q=80&w=1200&auto=format&fit=crop",
+      "/images/WhatsApp Image 2026-08-09 at 08.37.32.jpeg"",
   },
 
   // ---------------------------------------------------------------------------
