@@ -54,7 +54,7 @@ export const eventConfig = {
 
   hero: {
     title: "Os sonhos criam asas",
-    subtitle: "Os meus 15 anos",
+    subtitle: "Meus 15 anos",
     ctaPrimary: "Confirmar Presença",
     ctaSecondary: "Ver Local",
     backgroundImage:
@@ -66,7 +66,7 @@ export const eventConfig = {
   // Formato ISO 8601 — altere apenas os números abaixo.
   // ---------------------------------------------------------------------------
   countdown: {
-    // 12 de setembro de 2026, às 19h30 (horário de Brasília, -03:00)
+    // 12 de setembro de 2026, às 20h30 (horário de Brasília, -03:00)
     targetDate: "2026-09-12T19:30:00-03:00",
     reachedMessage: "A grande noite chegou!",
   },
@@ -106,12 +106,12 @@ export const eventConfig = {
   // ---------------------------------------------------------------------------
   location: {
     date: "12 de Setembro de 2026",
-    time: "19h30",
-    venueName: "Espaço Jardim Imperial",
-    address: "Rua das Orquídeas, 450 — Centro, Varginha - MG, 37002-000",
+    time: "20h30",
+    venueName: "Fly Eventos",
+    address: "Avenida Francisco Gonçalves Valim, 730 — Rezende, Varginha - MG, 37062-200",
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.0!2d-45.4306!3d-21.5533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDMzJzExLjkiUyA0NcKwMjUnNTAuMiJX!5e0!3m2!1spt-BR!2sbr!4v1690000000000",
-    mapUrl: "https://maps.google.com/?q=Rua+das+Orquídeas,450,Varginha,MG",
+      "https://www.google.com/maps?q=Avenida+Francisco+Goncalves+Valim,+730,+Varginha,+MG&output=embed",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Avenida+Francisco+Goncalves+Valim,+730,+Varginha,+MG",
     howToArriveLabel: "Como chegar",
   },
 
@@ -120,32 +120,32 @@ export const eventConfig = {
   // ---------------------------------------------------------------------------
   schedule: [
     {
-      time: "19h30",
+      time: "20h30",
       title: "Recepção",
       description: "Chegada dos convidados com boas-vindas e welcome drink.",
     },
     {
-      time: "20h00",
+      time: "22h00",
       title: "Cerimônia",
       description: "Entrada da debutante e homenagem especial da família.",
     },
     {
-      time: "20h45",
+      time: "22h45",
       title: "Jantar",
       description: "Jantar completo servido harmonizado com o clima da noite.",
     },
     {
-      time: "22h00",
+      time: "00h00",
       title: "Valsa",
       description: "A tradicional valsa de 15 anos ao lado do pai e amigos.",
     },
     {
-      time: "22h30",
+      time: "00h30",
       title: "Balada",
       description: "Pista de dança liberada com DJ ao vivo até o fim da festa.",
     },
     {
-      time: "01h00",
+      time: "04h00",
       title: "Encerramento",
       description: "Última dança e despedida com muito carinho.",
     },
@@ -155,13 +155,13 @@ export const eventConfig = {
   // DRESS CODE
   // ---------------------------------------------------------------------------
   dressCode: {
-    title: "Traje Esporte Fino",
-    description:
-      "Para viver essa noite com toda a elegância que ela merece, sugerimos tons de azul, prata e branco — inspirados no voo das borboletas. Evite branco total (reservado à debutante) e jeans.",
-    suggestions: [
-      { label: "Tons sugeridos", detail: "Azul royal, azul tiffany, prata e branco" },
-      { label: "Evitar", detail: "Branco total e jeans" },
-      { label: "Trajes", detail: "Vestido longo ou midi / Terno ou blazer" },
+  title: "Traje Esporte Fino",
+  description:
+    "Uma noite especial merece uma produção à altura. Escolha um look elegante, confortável e que tenha a sua personalidade.",
+  suggestions: [
+    { label: "Para elas", detail: "Vestido, conjunto ou outra produção em estilo esporte fino" },
+    { label: "Para eles", detail: "Camisa social, blazer ou traje em estilo esporte fino" },
+    { label: "Importante", detail: "Evite trajes muito casuais, como jeans, bermuda e chinelo" },
     ],
     images: [
       "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1200&auto=format&fit=crop",
@@ -175,30 +175,9 @@ export const eventConfig = {
   // ---------------------------------------------------------------------------
   gifts: [
     {
-      id: "amazon",
-      name: "Lista Amazon",
-      description: "Confira minha lista de desejos selecionada com carinho.",
-      url: "https://www.amazon.com.br/",
-      ctaLabel: "Ver lista",
-    },
-    {
-      id: "magalu",
-      name: "Magazine Luiza",
-      description: "Outra opção de lista de presentes com entrega facilitada.",
-      url: "https://www.magazineluiza.com.br/",
-      ctaLabel: "Ver lista",
-    },
-    {
-      id: "outro",
-      name: "Outra Loja",
-      description: "Lista adicional em loja parceira do evento.",
-      url: "https://www.example.com/",
-      ctaLabel: "Ver lista",
-    },
-    {
       id: "pix",
       name: "PIX",
-      description: "Chave PIX: (35) 90000-0000 — Ana Júlia",
+      description: "Chave PIX: 151.244.246-13 — Ana Júlia",
       url: "#",
       ctaLabel: "Copiar chave",
     },
