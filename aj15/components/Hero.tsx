@@ -93,15 +93,18 @@ export default function Hero() {
         style={{ y: contentY, opacity: contentOpacity }}
         className="relative z-10 flex max-w-3xl flex-col items-center px-6 text-center"
       >
-        <motion.span
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.5, duration: 0.8 }}
-          className="mb-6 font-display text-4xl tracking-widest2 text-tiffany-300 md:text-5xl"
-        >
-          {eventConfig.debutante.monogram}
-        </motion.span>
-
+       <motion.div
+  style={{ y: contentY, opacity: contentOpacity }}
+  className="relative z-10 flex max-w-3xl flex-col items-center px-6 text-center"
+>
+  <motion.img
+    src="/images/logo-aj-monograma-transparente-v2.png"
+    alt="Ana Júlia"
+    initial={{ opacity: 0, y: 16, scale: 0.9 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ delay: 2.5, duration: 0.8 }}
+    className="mb-6 h-auto w-44 object-contain drop-shadow-lg sm:w-52 md:w-60"
+  />
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
