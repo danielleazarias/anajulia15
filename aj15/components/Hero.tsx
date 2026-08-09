@@ -88,11 +88,7 @@ export default function Hero() {
           <Butterfly key={i} {...b} />
         ))}
       </div>
-
-      <motion.div
-        style={{ y: contentY, opacity: contentOpacity }}
-        className="relative z-10 flex max-w-3xl flex-col items-center px-6 text-center"
-      >
+      
        <motion.div
   style={{ y: contentY, opacity: contentOpacity }}
   className="relative z-10 flex max-w-3xl flex-col items-center px-6 text-center"
