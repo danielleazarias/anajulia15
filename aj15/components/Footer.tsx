@@ -15,16 +15,15 @@ export default function Footer() {
   return (
     <footer className="relative bg-royal-900 py-16 text-center">
       <div className="mx-auto max-w-2xl px-6">
-        <motion.span
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="font-display text-3xl tracking-widest text-tiffany-300"
-        >
-          {eventConfig.debutante.monogram}
-        </motion.span>
-
+       <motion.img
+  src="/images/monograma-aj-prateado.png"
+  alt="Monograma Ana Júlia"
+  initial={{ opacity: 0, y: 12, scale: 0.9 }}
+  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="mx-auto h-auto w-24 object-contain drop-shadow-lg sm:w-28"
+/>
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
