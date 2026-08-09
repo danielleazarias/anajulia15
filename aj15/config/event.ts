@@ -58,7 +58,7 @@ export const eventConfig = {
     ctaPrimary: "Confirmar Presença",
     ctaSecondary: "Ver Local",
     backgroundImage:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1509319117193-57bab727e09d?q=80&w=1200&auto=format&fit=crop",
   },
 
   // ---------------------------------------------------------------------------
@@ -137,7 +137,7 @@ export const eventConfig = {
     {
       time: "00h00",
       title: "Valsa",
-      description: "A tradicional valsa de 15 anos ao lado do pai e amigos.",
+      description: "A tradicional valsa de 15 anos.",
     },
     {
       time: "00h30",
