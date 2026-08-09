@@ -193,14 +193,28 @@ export const eventConfig = {
   // ---------------------------------------------------------------------------
   // GALERIA (imagens placeholder — substitua pelos arquivos reais em /public/images)
   // ---------------------------------------------------------------------------
-  gallery: [
-    { id: "g1", src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop", alt: "Momento especial 1" },
-    { id: "g2", src: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1200&auto=format&fit=crop", alt: "Momento especial 2" },
-    { id: "g3", src: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop", alt: "Momento especial 3" },
-    { id: "g4", src: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop", alt: "Momento especial 4" },
-    { id: "g5", src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop", alt: "Momento especial 5" },
-    { id: "g6", src: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1200&auto=format&fit=crop", alt: "Momento especial 6" },
-  ] as GalleryImage[],
+ gallery: [
+  {
+    id: "g1",
+    src: "/images/WhatsApp Image 2026-08-09 at 08.30.10.jpeg",
+    alt: "Ana Júlia",
+  },
+  {
+    id: "g2",
+    src: "/images/WhatsApp Image 2026-08-09 at 08.32.51 (1).jpeg",
+    alt: "Ana Júlia",
+  },
+  {
+    id: "g3",
+    src: "/images/WhatsApp Image 2026-08-09 at 08.33.31.jpeg",
+    alt: "Ana Júlia",
+  },
+  {
+    id: "g4",
+    src: "/images/WhatsApp Image 2026-08-09 at 08.37.32.jpeg",
+    alt: "Ana Júlia",
+  },
+] as GalleryImage[],
 
   // ---------------------------------------------------------------------------
   // CONTATO E REDES SOCIAIS
