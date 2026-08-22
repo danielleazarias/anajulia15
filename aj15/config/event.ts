@@ -161,7 +161,7 @@ export const eventConfig = {
   suggestions: [
     { label: "Para elas", detail: "Vestido, conjunto ou outra produção em estilo esporte fino" },
     { label: "Para eles", detail: "Camisa social, blazer ou traje em estilo esporte fino" },
-    { label: "Importante", detail: "Evite trajes muito casuais, como jeans, bermuda e chinelo" },
+    { label: "Importante", detail: "Evite trajes muito casuais, como bermuda e chinelo" },
     ],
     images: [
       "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1200&auto=format&fit=crop",
@@ -173,22 +173,97 @@ export const eventConfig = {
   // LISTA DE PRESENTES
   // Adicione, remova ou edite itens livremente nesta lista.
   // ---------------------------------------------------------------------------
-  gifts: [
-    {
-      id: "pix",
-      name: "PIX",
-      description: "Chave PIX: 151.244.246-13 — Ana Júlia",
-      url: "#",
-      ctaLabel: "Copiar chave",
-    },
-    {
-      id: "dinheiro",
-      name: "Presente em Dinheiro",
-      description: "Haverá uma urna especial disponível durante a festa.",
-      url: "#",
-      ctaLabel: "Saiba mais",
-    },
-  ] as GiftOption[],
+  gifts: // ---------------------------------------------------------------------------
+// LISTA DE PRESENTES
+// Presentes simbólicos com pagamento via Mercado Pago.
+// ---------------------------------------------------------------------------
+
+gifts: [
+  {
+    id: "sorvete",
+    name: "🍦 Sorvetinho com as amigas",
+    description: "Um momento gostoso com as amigas para aproveitar e criar boas memórias. — R$ 50,00",
+    url: "https://mpago.la/2ZBZHot",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "cinema",
+    name: "🍿 Cinema + pipoca",
+    description: "Uma sessão de cinema com direito a pipoca e muita diversão. — R$ 75,00",
+    url: "https://mpago.la/2Fk1AWh",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "pizza",
+    name: "🍕 Noite da pizza",
+    description: "Uma noite deliciosa para curtir com quem ela ama. — R$ 100,00",
+    url: "https://mpago.la/2MomBvi",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "beleza",
+    name: "💅 Dia de beleza",
+    description: "Um dia especial para se cuidar, relaxar e ficar ainda mais linda. — R$ 220,00",
+    url: "https://mpago.la/1jiquKq",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "look",
+    name: "👗 Look novo",
+    description: "Uma ajudinha para escolher aquele look que é a cara da Juju. — R$ 330,00",
+    url: "https://mpago.la/24xoMu7",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "ilhabela",
+    name: "🏖️ Cota viagem para Ilhabela",
+    description: "Uma contribuição para viver dias incríveis e colecionar novas memórias. — R$ 350,00",
+    url: "https://mpago.la/2AmDpdC",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "mala",
+    name: "🧳 Mala pronta para a próxima viagem",
+    description: "Uma ajudinha para preparar as malas para a próxima aventura. — R$ 450,00",
+    url: "https://mpago.la/2Py8Awh",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "viagem-sonhos",
+    name: "✈️ Cota viagem dos sonhos",
+    description: "Para ajudar a transformar novos destinos em histórias inesquecíveis. — R$ 550,00",
+    url: "https://mpago.la/2MjXVYj",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "shopping",
+    name: "🛍️ Dia de princesa no shopping",
+    description: "Um dia para passear, escolher algumas coisinhas e aproveitar muito. — R$ 600,00",
+    url: "https://mpago.la/2FZk4dK",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "passagem",
+    name: "✈️ Ajuda para a próxima passagem aérea",
+    description: "Uma contribuição especial para levar a Juju à próxima aventura. — R$ 1.000,00",
+    url: "https://mpago.la/177mcBn",
+    ctaLabel: "Presentear",
+  },
+  {
+    id: "valor-livre",
+    name: "💙 Escolha o valor do seu presente",
+    description: "Prefere escolher outro valor? Fique à vontade para presentear como quiser.",
+    url: "https://link.mercadopago.com.br/juju15anos",
+    ctaLabel: "Escolher valor",
+  },
+  {
+    id: "pix",
+    name: "💠 Prefere presentear via PIX?",
+    description: "Chave PIX: 151.244.246-13 — Ana Júlia",
+    url: "#",
+    ctaLabel: "Copiar chave PIX",
+  },
+] as GiftOption[],
 
   // ---------------------------------------------------------------------------
   // GALERIA (imagens placeholder — substitua pelos arquivos reais em /public/images)
