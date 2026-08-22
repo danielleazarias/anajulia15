@@ -6,6 +6,7 @@ import ButterflyCursor from "@/components/ButterflyCursor";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import LoadingScreen from "@/components/LoadingScreen";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import { Analytics } from "@vercel/analytics/next";
 
 const displayFont = Cormorant_Garamond({
   subsets: ["latin"],
@@ -85,6 +86,7 @@ export default function RootLayout({
         <ButterflyCursor />
         {children}
         <ScrollToTopButton />
+        <Analytics />
       </body>
     </html>
   );
