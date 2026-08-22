@@ -10,7 +10,10 @@ interface RSVPFormData {
   name: string;
   phone: string;
   guestsCount: string;
-  guestsNames: string;
+  guests: {
+    name: string;
+    age: string;
+  }[];
   dietaryRestrictions: string;
   message: string;
 }
@@ -28,7 +31,7 @@ export default function RSVPForm() {
       name: "",
       phone: "",
       guestsCount: "0",
-      guestsNames: "",
+guests: [],›
       dietaryRestrictions: "",
       message: "",
     },
@@ -37,7 +40,25 @@ export default function RSVPForm() {
   const [submitted, setSubmitted] = useState(false);
   const guestsCount = Number(watch("guestsCount") ?? 0);
 
-  const onSubmit = async (data: RSVPFormData) => {
+  const onSubmit = async (data: RSVPFormData) => {const guestsNames = data.guests
+  ?.map((guest) => guest.name)
+  .filter(Boolean)
+  .join(", ");
+
+const guestsAges = data.guests
+  ?.map((guest) => guest.age)
+  .filter(Boolean)
+  .join(", ");
+
+const childrenUnder10 =
+  data.guests?.filter((guest) => Number(guest.age) <= 10).length || 0;
+
+const payload = {
+  ...data,
+  guestsNames,
+  guestsAges,
+  childrenUnder10,
+};
     // -----------------------------------------------------------------------
     // PONTO DE INTEGRAÇÃO FUTURA — envio da confirmação de presença.
     // Escolha UMA das opções abaixo e substitua o bloco de simulação.
@@ -66,7 +87,7 @@ export default function RSVPForm() {
     headers: {
       "Content-Type": "text/plain;charset=utf-8",
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(payload),,
   }
 );
 
@@ -162,44 +183,95 @@ if (!response.ok) {
           <label htmlFor="guestsCount" className="mb-2 flex items-center gap-2 font-body text-sm text-royal-800">
             <Users className="h-4 w-4 text-tiffany-600" aria-hidden="true" />
             Acompanhantes
-          </label>
-          <select
-            id="guestsCount"
-            {...register("guestsCount")}
-            className="w-full rounded-xl border border-silver-300 bg-white px-4 py-3 font-body text-royal-900 outline-none transition-colors focus:border-tiffany-500"
+         <div className="sm:col-span-2">
+  <label
+    htmlFor="guestsCount"
+    className="mb-2 flex items-center gap-2 font-body text-sm text-royal-800"
+  >
+    <Users className="h-4 w-4 text-tiffany-600" aria-hidden="true" />
+    Acompanhantes previstos no convite
+  </label>
+
+  <p className="mb-3 font-body text-xs text-royal-700/70">
+    Informe acompanhantes somente se eles estiverem incluídos no convite recebido.
+  </p>
+
+  <select
+    id="guestsCount"
+    {...register("guestsCount")}
+    className="w-full rounded-xl border border-silver-300 bg-white px-4 py-3 font-body text-royal-900 outline-none transition-colors focus:border-tiffany-500"
+  >
+    <option value="0">Meu convite é individual</option>
+    <option value="1">Meu convite inclui 1 acompanhante</option>
+    <option value="2">Meu convite inclui 2 acompanhantes</option>
+    <option value="3">Meu convite inclui 3 acompanhantes</option>
+  </select>
+</div>
+
+{guestsCount > 0 && (
+  <div className="sm:col-span-2 space-y-4">
+    <div>
+      <p className="font-body text-sm font-medium text-royal-800">
+        Dados dos acompanhantes
+      </p>
+
+      <p className="mt-1 font-body text-xs text-royal-700/70">
+        Preencha o nome e a idade de cada acompanhante.
+      </p>
+    </div>
+
+    {Array.from({ length: guestsCount }).map((_, index) => (
+      <div
+        key={index}
+        className="grid grid-cols-1 gap-3 rounded-2xl border border-silver-200 bg-white/60 p-4 sm:grid-cols-3"
+      >
+        <div className="sm:col-span-2">
+          <label
+            htmlFor={`guest-${index}-name`}
+            className="mb-2 block font-body text-xs text-royal-700"
           >
-            {Array.from({ length: 6 }).map((_, i) => (
-              <option key={i} value={i}>
-                {i}
-              </option>
-            ))}
-          </select>
+            Nome do acompanhante {index + 1}
+          </label>
+
+          <input
+            id={`guest-${index}-name`}
+            type="text"
+            {...register(`guests.${index}.name` as const, {
+              required: "Informe o nome do acompanhante.",
+            })}
+            className="w-full rounded-xl border border-silver-300 bg-white px-4 py-3 font-body text-royal-900 outline-none transition-colors focus:border-tiffany-500"
+            placeholder="Nome completo"
+          />
         </div>
 
-        {guestsCount > 0 && (
-          <div className="sm:col-span-2">
-            <label htmlFor="guestsNames" className="mb-2 flex items-center gap-2 font-body text-sm text-royal-800">
-              <Users className="h-4 w-4 text-tiffany-600" aria-hidden="true" />
-              Nome dos acompanhantes
-            </label>
-            <input
-              id="guestsNames"
-              type="text"
-              aria-invalid={!!errors.guestsNames}
-              aria-describedby={errors.guestsNames ? "guestsNames-error" : undefined}
-              {...register("guestsNames", {
-                required: guestsCount > 0 ? "Informe o nome dos acompanhantes." : false,
-              })}
-              className="w-full rounded-xl border border-silver-300 bg-white px-4 py-3 font-body text-royal-900 outline-none transition-colors focus:border-tiffany-500"
-              placeholder="Ex: Maria Silva, João Souza"
-            />
-            {errors.guestsNames && (
-              <p id="guestsNames-error" role="alert" className="mt-1.5 text-xs text-red-600">
-                {errors.guestsNames.message}
-              </p>
-            )}
-          </div>
-        )}
+        <div>
+          <label
+            htmlFor={`guest-${index}-age`}
+            className="mb-2 block font-body text-xs text-royal-700"
+          >
+            Idade
+          </label>
+
+          <input
+            id={`guest-${index}-age`}
+            type="number"
+            min="0"
+            max="120"
+            {...register(`guests.${index}.age` as const, {
+              required: "Informe a idade.",
+            })}
+            className="w-full rounded-xl border border-silver-300 bg-white px-4 py-3 font-body text-royal-900 outline-none transition-colors focus:border-tiffany-500"
+            placeholder="Idade"
+          />
+        </div>
+      </div>
+    ))}
+
+    <p className="font-body text-xs text-royal-700/70">
+      A idade é solicitada apenas para organização do buffet.
+    </p>
+  </div>
+)}
 
         <div className="sm:col-span-2">
           <label htmlFor="dietaryRestrictions" className="mb-2 flex items-center gap-2 font-body text-sm text-royal-800">
