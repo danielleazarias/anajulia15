@@ -31,7 +31,7 @@ export default function RSVPForm() {
       name: "",
       phone: "",
       guestsCount: "0",
-guests: [],›
+guests: [],
       dietaryRestrictions: "",
       message: "",
     },
