@@ -60,7 +60,7 @@ export default function RSVPForm() {
     // -----------------------------------------------------------------------
 
    const response = await fetch(
-  "https://script.google.com/macros/s/AKfycbyQvxUKgDWklrUrxjG9ofqj8GAw7NNsUy2TNwov4EmmNwfF6YhilTNIOBQQqpbNF7M/exec",
+"https://script.google.com/macros/s/AKfycbxMIL0OLl_uBdgSKeKFJrYAVRrLozpGFygHIDP6eq4iUHrNknx6ZvgIpnUfgMtp7zs/exec",
   {
     method: "POST",
     headers: {
