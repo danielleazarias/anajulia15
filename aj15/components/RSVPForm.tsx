@@ -91,9 +91,12 @@ const payload = {
   }
 );
 
-if (!response.ok) {
-  throw new Error("Erro ao enviar confirmação");
-} // simulação de envio
+const result = await response.json();
+
+if (!response.ok || !result.success) {
+  console.error("Erro retornado pelo Apps Script:", result.error);
+  throw new Error(result.error || "Erro ao enviar confirmação");
+}
 
     setSubmitted(true);
     reset();
