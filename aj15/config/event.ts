@@ -265,16 +265,7 @@ gifts: [
   // GALERIA (imagens placeholder — substitua pelos arquivos reais em /public/images)
   // ---------------------------------------------------------------------------
  gallery: [
-  {
-    id: "g1",
-    src: "/images/WhatsApp Image 2026-08-09 at 08.30.10.jpeg",
-    alt: "Ana Júlia",
-  },
-  {
-    id: "g2",
-    src: "/images/WhatsApp Image 2026-08-09 at 08.32.51 (1).jpeg",
-    alt: "Ana Júlia",
-  },
+
   {
     id: "g3",
     src: "/images/WhatsApp Image 2026-08-09 at 08.33.31.jpeg",
