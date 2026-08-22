@@ -276,6 +276,26 @@ gifts: [
     src: "/images/WhatsApp Image 2026-08-09 at 08.37.32.jpeg",
     alt: "Ana Júlia",
   },
+   {
+    id: "g2",
+    src: "/images/Juju13.jpeg",
+    alt: "Ana Júlia",
+  },
+ {
+    id: "g1",
+    src: "/images/Juju14.jpeg",
+    alt: "Ana Júlia",
+  },
+   {
+    id: "g5",
+    src: "/images/Juju19.jpeg",
+    alt: "Ana Júlia",
+  },
+    {
+    id: "g6",
+    src: "/images/Juju23.jpeg",
+    alt: "Ana Júlia",
+  },
 ] as GalleryImage[],
 
   // ---------------------------------------------------------------------------
