@@ -112,7 +112,7 @@ export default function Gallery() {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <div className="relative mx-auto overflow-hidden rounded-[2rem] bg-silver-100 shadow-soft">
+          <div className="relative h-[520px] sm:h-[620px] lg:h-[680px]">
             <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9]">
 
               <AnimatePresence mode="wait">
@@ -136,7 +136,7 @@ export default function Gallery() {
                     alt={currentImage.alt}
                     fill
                     priority={currentIndex === 0}
-                    className="object-cover"
+                    className="object-contain p-3 sm:p-5"
                     sizes="(max-width: 768px) 100vw, 1100px"
                   />
                 </motion.div>
