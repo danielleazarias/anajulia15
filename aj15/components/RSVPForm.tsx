@@ -179,10 +179,6 @@ if (!response.ok) {
           )}
         </div>
 
-        <div>
-          <label htmlFor="guestsCount" className="mb-2 flex items-center gap-2 font-body text-sm text-royal-800">
-            <Users className="h-4 w-4 text-tiffany-600" aria-hidden="true" />
-            Acompanhantes
          <div className="sm:col-span-2">
   <label
     htmlFor="guestsCount"
