@@ -59,7 +59,20 @@ export default function RSVPForm() {
     //   await supabase.from("rsvps").insert([data]);
     // -----------------------------------------------------------------------
 
-    await new Promise((resolve) => setTimeout(resolve, 900)); // simulação de envio
+   const response = await fetch(
+  "https://script.google.com/macros/s/AKfycbyQvxUKgDWklrUrxjG9ofqj8GAw7NNsUy2TNwov4EmmNwfF6YhilTNIOBQQqpbNF7M/exec",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8",
+    },
+    body: JSON.stringify(data),
+  }
+);
+
+if (!response.ok) {
+  throw new Error("Erro ao enviar confirmação");
+} // simulação de envio
 
     setSubmitted(true);
     reset();
