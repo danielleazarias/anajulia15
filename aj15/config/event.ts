@@ -323,7 +323,7 @@ gifts: [
   }, 
    {
     id: "g12",
-    src: "/images/Juju88.HEIC",
+    src: "/images/Juju68.jpg",
     alt: "Ana Júlia",
   },
    {
