@@ -321,6 +321,21 @@ gifts: [
     src: "/images/Juju8.jpg",
     alt: "Ana Júlia",
   }, 
+   {
+    id: "g12",
+    src: "/images/Juju88.HEIC",
+    alt: "Ana Júlia",
+  },
+   {
+    id: "g13",
+    src: "/images/Juju82.jpg",
+    alt: "Ana Júlia",
+  },
+   {
+    id: "g14",
+    src: "/images/Juju81.jpg",
+    alt: "Ana Júlia",
+  },
    
 ] as GalleryImage[],
 
