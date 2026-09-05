@@ -344,16 +344,16 @@ gifts: [
   // ---------------------------------------------------------------------------
   contact: {
     phone: "+55 35 90000-0000",
-    whatsapp: "5535900000000",
+    whatsapp: "5511960840331",
     instagram: {
       handle: "@anajulia15anos",
-      url: "https://instagram.com/anajulia15anos",
+      url: "https://instagram.com/its__annaju",
     },
   },
 
   socials: [
-    { id: "instagram", label: "Instagram", url: "https://instagram.com/anajulia15anos" },
-    { id: "whatsapp", label: "WhatsApp", url: "https://wa.me/5535900000000" },
+    { id: "instagram", label: "Instagram", url: "https://instagram.com/its__annaju" },
+    { id: "whatsapp", label: "WhatsApp", url: "https://wa.me/5511960840331" },
   ] as SocialLink[],
 
   footer: {
