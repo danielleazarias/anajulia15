@@ -33,7 +33,7 @@ export default function RSVPSection() {
           className="mx-auto mt-5 max-w-md text-center font-body text-base text-silver-200/90"
         >
           Sua presença tornará essa noite ainda mais especial. Confirme até
-          15 dias antes do evento.
+          10/09/2026.
         </motion.p>
 
         <motion.div
