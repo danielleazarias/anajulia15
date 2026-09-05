@@ -32,7 +32,7 @@ export default function RSVPSection() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="mx-auto mt-5 max-w-md text-center font-body text-base text-silver-200/90"
         >
-          Sua presença tornará essa noite ainda mais especial. Confirme 10 de Setembro de 2026.
+          Sua presença tornará essa noite ainda mais especial. Confirme sua presença até 10 de Setembro de 2026.
         </motion.p>
 
         <motion.div
