@@ -8,18 +8,29 @@ import { eventConfig } from "@/config/event";
 export default function GiftList() {
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  const handleClick = async (id: string, url: string, e: React.MouseEvent) => {
-    if (id === "pix") {
-      e.preventDefault();
-      try {
-        await navigator.clipboard.writeText(eventConfig.gifts.find((g) => g.id === "pix")?.description ?? "");
-        setCopiedId(id);
-        setTimeout(() => setCopiedId(null), 2000);
-      } catch {
-        // Clipboard indisponível — usuário pode copiar manualmente pelo texto exibido.
-      }
+const handleClick = async (id: string, url: string, e: React.MouseEvent) => {
+  if (id === "pix") {
+    e.preventDefault();
+
+    const pixKey = "15124424613";
+
+    try {
+      await navigator.clipboard.writeText(pixKey);
+      setCopiedId(id);
+      setTimeout(() => setCopiedId(null), 2000);
+    } catch {
+      const textArea = document.createElement("textarea");
+      textArea.value = pixKey;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+
+      setCopiedId(id);
+      setTimeout(() => setCopiedId(null), 2000);
     }
-  };
+  }
+};
 
   return (
     <section id="presentes" className="relative bg-white py-24">
